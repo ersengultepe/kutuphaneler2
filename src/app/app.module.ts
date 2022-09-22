@@ -7,6 +7,7 @@ import { LayoutsComponent } from './components/layouts/layouts.component';
 import { NavbarComponent } from './components/layouts/navbar/navbar.component';
 import { LoginComponent } from './components/login/login.component';
 import { BootstrapComponent } from './components/bootstrap/bootstrap.component';
+import { ToastrComponent } from './components/toastr/toastr.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { BootstrapComponent } from './components/bootstrap/bootstrap.component';
     LayoutsComponent,
     NavbarComponent,
     LoginComponent,
-    BootstrapComponent
+    BootstrapComponent,
+    ToastrComponent
   ],
   imports: [
     BrowserModule,
