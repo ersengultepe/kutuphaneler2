@@ -11,6 +11,7 @@ import { NavbarComponent } from './components/layouts/navbar/navbar.component';
 import { LoginComponent } from './components/login/login.component';
 import { BootstrapComponent } from './components/bootstrap/bootstrap.component';
 import { ToastrComponent } from './components/toastr/toastr.component';
+import { SwalComponent } from './components/swal/swal.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +20,18 @@ import { ToastrComponent } from './components/toastr/toastr.component';
     NavbarComponent,
     LoginComponent,
     BootstrapComponent,
-    ToastrComponent
+    ToastrComponent,
+    SwalComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot(), 
+    ToastrModule.forRoot({
+      closeButton: true,
+      progressBar: true,
+      progressAnimation: "increasing",
+      positionClass: 'toast-top-right'
+    }), 
     AppRoutingModule
   ],
   providers: [],
