@@ -12,8 +12,23 @@ export class ToastrComponent implements OnInit {
     private _toastr: ToastrService
   ) { }
 
-  ngOnInit(): void {
-    this._toastr.success("Başarılı")
+  ngOnInit(): void {    
+  }
+
+  success(){
+    this._toastr.success("Success toastr çalıştı","Success Toastr");
+  }
+
+  info(){
+    this._toastr.info("Info toastr çalıştı","Info Toastr");
+  }
+
+  warning(){
+    this._toastr.warning("Warning toastr çalıştı","Warning Toastr");
+  }
+
+  error(){
+    this._toastr.error("Error toastr çalıştı","Error Toastr");
   }
 
 }
