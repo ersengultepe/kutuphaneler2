@@ -43,7 +43,7 @@ export class SwalComponent implements OnInit {
     this.callSwal("Error Swal çağırıldı","Error","error")
   }
 
-  callSwalQuestion(title: string, text: string, btnName: string){
+  callSwalQuestion(title: string, text: string, btnIcon: string, btnName: string){
     let swal = Swal.fire({
       title: title,
       text: text,
@@ -51,14 +51,14 @@ export class SwalComponent implements OnInit {
       cancelButtonText: "<i class='fa-solid fa-circle-xmark'></i> Vazgeç",
       showConfirmButton: true,
       cancelButtonColor: "red",
-      confirmButtonText: "<i class='fa-solid fa-trash'></i> " + btnName,
+      confirmButtonText: "<i class='" + btnIcon + "'></i> " + btnName,
       icon: "question"
     });
     return swal;
   }
 
   sil(){
-    this.callSwalQuestion("Sil?","Silmek istiyor musunuz?","Sil").then((res)=>{
+    this.callSwalQuestion("Sil?","Silmek istiyor musunuz?","fa-solid fa-trash","Sil").then((res)=>{
       if (res.isConfirmed) {
         console.log("Silme işlemi yapıldı");        
       }else if(res.dismiss == Swal.DismissReason.cancel){
