@@ -1,0 +1,34 @@
+Sayfalama yapmak için kullanabileceğimiz kütüphane
+Kurulum linki:
+npm install ngx-pagination --save
+
+Dökümantasyon:
+https://github.com/michaelbromley/ngx-pagination
+https://www.npmjs.com/package/ngx-pagination
+
+
+-------------------------------------------------------
+Spinner için
+Kurulum Linki:
+npm i ngx-spinner
+
+Dökümantasyon:
+https://www.npmjs.com/package/ngx-spinner
+
+Options & Örnek Kullanım:
+https://napster2210.github.io/ngx-spinner/
+
+
+-------------------------------------------------------
+Excel çıktısı almak için
+Kurulum Linki: 
+npm i ngx-export-as
+
+Dökümantasyon:
+https://www.npmjs.com/package/ngx-export-as
+
+
+------------------------------------------------------------,
+Başka Datable yapısı
+https://datatables.net/
+
