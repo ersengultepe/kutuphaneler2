@@ -1,21 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+Kurulacak Kütühane Linki
+-------------------------------
+npm i @sweetalert2/ngx-sweetalert2
+-------------------------------
+
+(*) Kurulum sonrası normalde app.module import kısmına
+ekleme yapılmıyor fakat uygulama console'da Import hatası verirse
+app.module Import kısmına SweetAlert2Module importu yapılmalıdır
+
+Kullanacağımız component / service yapısında öncelikle üsttek import kısmına
+aşağıdaki kod bloğu yazılır
+-------------------------------
 import Swal from 'sweetalert2'
+-------------------------------
 
-@Component({
-  selector: 'app-swal',
-  templateUrl: './swal.component.html',
-  styleUrls: ['./swal.component.css']
-})
-export class SwalComponent implements OnInit {
-
-  constructor() { 
-    
-  } 
-
-  ngOnInit(): void {
-  }
-
-  callSwal(message:string, title: string, options: any){
+Örnek Swal Toast kod bloğu
+-------------------------------
+callSwal(message:string, title: string, options: any){
     const Toast = Swal.mixin({
       toast: true,
       position: 'top-end',
@@ -30,19 +30,10 @@ export class SwalComponent implements OnInit {
   success(){
     this.callSwal("Success Swal çağırıldı","Success","success")
   }
+ -------------------------------
 
-  info(){
-    this.callSwal("Info Swal çağırıldı","Info","info")
-  }
-
-  warning(){
-    this.callSwal("Warning Swal çağırıldı","Warning","warning")
-  }
-
-  error(){
-    this.callSwal("Error Swal çağırıldı","Error","error")
-  }
-
+  Örnek Swal Question kod bloğu
+  -------------------------------
   callSwalQuestion(title: string, text: string, btnName: string){
     let swal = Swal.fire({
       title: title,
@@ -66,6 +57,4 @@ export class SwalComponent implements OnInit {
        }
     })
   }
-
-
-}
+  -------------------------------
